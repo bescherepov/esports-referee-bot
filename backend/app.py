@@ -5,8 +5,7 @@ MATCHES = [
         'tournament': 'Tournament #1',
         'team1': 'Red',
         'team2': 'Blue',
-        'team1_score': '2',
-        'team2_score': '0'
+        'score': '2:0',
     }
 ]
 
