@@ -2,11 +2,11 @@ name: GitHub Telegram Notifier
 on: [push]
 env:
   message: |
-          **${{ github.actor }}** опубликовал коммит $(git rev-parse --short ${{ github.sha }}):
-          **Ветка:** ${{ github.ref_name }}
-          **Сообщение коммита**: ${{ github.event.commits[0].message }}
-          **Репозиторий**: ${{ github.repository }}
-          **Изменения в коммите**: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+          *${{ github.actor }}* опубликовал коммит *$(git rev-parse --short ${{ github.sha }})*:
+          *Ветка:* ${{ github.ref_name }}
+          *Сообщение коммита*: ${{ github.event.commits[0].message }}
+          *Репозиторий*: ${{ github.repository }}
+          *Изменения в коммите*: https://github.com/${{ github.repository }}/commit/${{github.sha}}
 jobs:
   send_message:
     runs-on: ubuntu-latest
