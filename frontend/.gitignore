@@ -34,3 +34,10 @@ playground-temp
 temp
 TODOs.md
 .eslintcache
+
+.log/
+node_modules/
+docs/
+css/
+export.scss
+export/
