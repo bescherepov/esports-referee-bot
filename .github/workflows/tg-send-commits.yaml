@@ -2,7 +2,7 @@ name: GitHub Telegram Notifier
 on: [push]
 env:
   message: |
-          *${{ github.actor }}* опубликовал коммит *$(git rev-parse --short ${{ github.sha }})*:
+          *${{ github.actor }}* опубликовал коммит:
           *Ветка:* ${{ github.ref_name }}
           *Сообщение коммита*: ${{ github.event.commits[0].message }}
           *Репозиторий*: ${{ github.repository }}
@@ -14,5 +14,5 @@ jobs:
     - name: Send Telegram Message
       run: |
         curl -s -X POST 'https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage' \
-        -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=${{ env.message }}&message_thread_id=${{ secrets.TELEGRAM_MSG_THREAD_ID }}"
+        -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}&text=${{ env.message }}&message_thread_id=${{ secrets.TELEGRAM_MSG_THREAD_ID }}&parse_mode=Markdown"
 
