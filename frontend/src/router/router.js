@@ -11,6 +11,7 @@ const routes = [
     },
     {
         path: '/matches',
+        name: 'Matches',
         component: Matches
     },
     {
@@ -28,4 +29,4 @@ const router = createRouter({
     history: createWebHistory()
 })
 
-export default router;
+export default router
