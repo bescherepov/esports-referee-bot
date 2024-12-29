@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <header class="menu">
+  <header class="menu bg-blue-500 ps-0.5 pe-0.5 text-xl flex space-x-2">
     <router-link to="/">Главная</router-link>
     <router-link to="/tour">Турниры</router-link>
     <router-link to="/matches">Матчи</router-link>
@@ -12,19 +12,4 @@
 </template>
 
 <style scoped>
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: cornflowerblue;
-
-    height: 100px;
-    padding-inline: 128px;
-  }
-  header a{
-    font-family: sans-serif;
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-  }
 </style>
