@@ -1,14 +1,12 @@
 name: GitHub Telegram Notifier
 on: [push]
-jobs:          
+jobs:
   send_message:
     runs-on: ubuntu-latest
-	  message: &message |
+    message: &message |
             ${{ github.actor }} опубликовал коммит:
             Сообщение коммита: ${{ github.event.commits[0].message }}
-            
             Репозиторий: ${{ github.repository }}
-            
             Изменения в коммите: https://github.com/${{ github.repository }}/commit/${{github.sha}}
     steps:
     - name: Send Telegram Message
