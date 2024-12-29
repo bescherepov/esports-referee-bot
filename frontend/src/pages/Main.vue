@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1>SERB</h1>
+  <h1 class="text-3xl text-blue-black">SERB</h1>
   <p>Текущие матчи: отсутствуют</p>
 </template>
 
