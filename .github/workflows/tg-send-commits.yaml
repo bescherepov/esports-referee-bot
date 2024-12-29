@@ -12,7 +12,5 @@ jobs:
     steps:
     - name: Send Telegram Message
       run: |
-        curl -s -X POST 'https://api.telegram.org/bot8065726194:AAG3wSvCMke8ArMSHOGhlYTIgu4Op7Ou_EI/sendMessage' \
-        -d "chat_id=-1002346531661&text=test&message_thread_id=2"
-
-
+        curl -s -X POST 'https://api.telegram.org/bot${{ secret.TELEGRAM_TOKEN }}/sendMessage' \
+        -d "chat_id=${{ secret.TELEGRAM_CHAT_ID }}&text=${{ env.message }}&message_thread_id=${{ secret.TELEGRAM_MSG_THREAD_ID }}"
