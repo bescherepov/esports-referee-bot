@@ -1,5 +1,5 @@
 <script setup>
-
+import {version_app} from "../main.js";
 </script>
 
 <template>
@@ -7,7 +7,10 @@
     <router-link to="/">Главная</router-link>
     <router-link to="/tour">Турниры</router-link>
     <router-link to="/matches">Матчи</router-link>
-    <router-link to="/about">About</router-link>
+    <router-link to="/teams">Команды</router-link>
+<!--    <router-link to="/players">Игроки</router-link>-->
+
+    <div class="fixed top-0 right-2">v{{version_app}}</div>
   </header>
 </template>
 
