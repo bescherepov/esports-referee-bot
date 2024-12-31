@@ -3,6 +3,8 @@ import {createRouter, createWebHistory} from "vue-router";
 import Matches from "../pages/Matches.vue";
 import Tournaments from "../pages/Tournaments.vue";
 import About from "../pages/About.vue";
+import Power from "../pages/Power.vue";
+import Teams from "../pages/Teams.vue";
 
 const routes = [
     {
@@ -21,6 +23,14 @@ const routes = [
     {
         path: '/about',
         component: About
+    },
+    {
+        path: '/teams',
+        component: Teams
+    },
+    {
+        path: '/power',
+        component: Power
     }
 ]
 
