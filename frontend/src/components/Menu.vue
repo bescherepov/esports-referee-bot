@@ -8,6 +8,7 @@ import {version_app} from "../main.js";
     <router-link to="/tour">Турниры</router-link>
     <router-link to="/matches">Матчи</router-link>
     <router-link to="/teams">Команды</router-link>
+    <router-link to="/profile">Профиль</router-link>
 <!--    <router-link to="/players">Игроки</router-link>-->
 
     <div class="fixed top-0 right-2">v{{version_app}}</div>

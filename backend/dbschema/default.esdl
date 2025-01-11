@@ -1,5 +1,5 @@
 module default {
-  scalar type RefRole extending enum<Ref, GameRef, GroupRef, AdminRef, MainRef, BOSS, DemoGuest>;
+  scalar type RefRole extending enum<"Ref", "GameRef", "GroupRef", "AdminRef", "MainRef", "BOSS", "DemoGuest">;
   scalar type TourStatus extending enum<Registering, Running, Finished>;
   scalar type MatchStatus extending enum<WaitingTime, NeedRef, WaitingStart,
   WaitingVerification, RunningMap1, RunningMap2, RunningMap3, RunningMap4, RunningMap5, RunningMap6, RunningMap7, Finished>;
@@ -22,7 +22,7 @@ module default {
   }
 
   type Referee{
-    required name: str;
+    required single name: str;
     vk: str;
     tg: str;
     grade: RefGrade {
