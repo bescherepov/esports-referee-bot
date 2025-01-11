@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     getProfileInfo() {
+      // todo use env url
       const path = 'http://localhost:5000/profile';
       axios.get(path)
         .then((res) => {

@@ -12,6 +12,7 @@ export default {
   },
   methods: {
     getMatches() {
+      // todo use env url
       const path = 'http://localhost:5000/matches';
       axios.get(path)
         .then((res) => {
