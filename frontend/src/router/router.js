@@ -5,6 +5,7 @@ import Tournaments from "../pages/Tournaments.vue";
 import About from "../pages/About.vue";
 import Power from "../pages/Power.vue";
 import Teams from "../pages/Teams.vue";
+import Profile from "../pages/Profile.vue";
 
 const routes = [
     {
@@ -27,6 +28,10 @@ const routes = [
     {
         path: '/teams',
         component: Teams
+    },
+    {
+        path: '/profile',
+        component: Profile
     },
     {
         path: '/power',
