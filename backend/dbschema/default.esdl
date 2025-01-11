@@ -25,6 +25,7 @@ module default {
     required single name: str;
     vk: str;
     tg: str;
+    gmail: str;
     grade: RefGrade {
       default := RefGrade.NoGrade;
     }
@@ -52,7 +53,6 @@ module default {
   type Tournament {
     required name: str;
     game: Game;
-
     start_date: cal::local_date;
     end_date: cal::local_date;
 
