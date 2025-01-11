@@ -85,8 +85,8 @@ module default {
     matchRef: Referee;
     time: datetime;
 
-    required team1: Team;
-    required team2: Team;
+    required single team1: Team;
+    required single team2: Team;
     team1_name := .team1.name;
     team2_name := .team2.name;
     
@@ -171,8 +171,11 @@ module default {
   }
 
   type ExternalRefParticipation {
-    required tourName: str;
-    required roleOnTour: str;
+    referee: Referee {
+      on target delete delete source;
+    }
+    tourName: str;
+    roleOnTour: str;
   }
   
 }
