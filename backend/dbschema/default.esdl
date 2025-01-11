@@ -53,8 +53,8 @@ module default {
     required name: str;
     game: Game;
 
-    start_date: datetime;
-    end_date: datetime;
+    start_date: cal::local_date;
+    end_date: cal::local_date;
 
     stage: TourStage {
       default := TourStage.GroupStage;
